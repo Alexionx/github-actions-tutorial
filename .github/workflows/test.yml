@@ -12,11 +12,9 @@ jobs:
     steps:
       - name: Show GITHUB_ACTIONS variable
         run: echo "GITHUB_ACTIONS is set to $GITHUB_ACTIONS"
-
       - name: Show branch and repository name
         run: |
           echo "Branch name: ${{ github.head_ref }}"
           echo "Repository: ${{ github.repository }}"
-
       - name: Show event name
         run: echo "Triggered by event: ${{ github.event_name }}"
