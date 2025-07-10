@@ -1,4 +1,4 @@
-name: PR Workflow by ${{ github.actor }}
+name: PR Workflow
 
 on:
   pull_request:
@@ -8,6 +8,7 @@ env:
 
 jobs:
   github-task-job:
+    name: Run by ${{ github.actor }}
     runs-on: ubuntu-latest
     steps:
       - name: Show GITHUB_ACTIONS variable
@@ -21,3 +22,7 @@ jobs:
       - name: Show event name
         run: |
           echo "Triggered by event: ${{ github.event_name }}"
+
+      - name: Show GitHub Actor
+        run: |
+          echo "Triggered by actor: ${{ github.actor }}"
