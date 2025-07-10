@@ -19,4 +19,5 @@ jobs:
           echo "Repository: ${{ github.repository }}"
       
       - name: Show event name
-        run: echo "Triggered by event: ${{ github.event_name }}"
+        run: |
+          echo "Triggered by event: ${{ github.event_name }}"
